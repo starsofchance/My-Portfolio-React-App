@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+// import Typical from "react-typical";
 import "./Profile.css";
 export default function Profile() {
   return (
@@ -46,7 +46,8 @@ export default function Profile() {
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
-              {""}
+              <h1>This is where you can get to know me.</h1>
+              {/* {""}
               <h1>
                 {""}
                 <Typical
@@ -62,7 +63,7 @@ export default function Profile() {
                     2000,
                   ]}
                 />
-              </h1>
+              </h1> */}
               <span className="profile-role-tagline">
                 Lets make the world a little better using front-end developer.
               </span>
