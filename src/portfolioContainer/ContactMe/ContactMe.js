@@ -48,17 +48,17 @@ export default function ContactMe(props) {
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
-        setBool(false);
       } else if (res.status === 200) {
         setBanner(res.data.msg);
         toast.success(res.data.msg);
-        setBool(false);
         setName("");
         setEmail("");
         setMessage("");
       }
     } catch (error) {
-      console.log("Invalid input");
+      console.log("Error sending email:", error);
+    } finally {
+      setBool(false);
     }
   };
 
