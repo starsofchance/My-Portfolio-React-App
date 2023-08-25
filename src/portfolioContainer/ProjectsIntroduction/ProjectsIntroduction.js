@@ -14,7 +14,7 @@ import shape from "../../../src/img/ProjectsIntroduction/shape-bg.png";
 import "./ProjectsIntroduction.css";
 export default function ProjectsIntroduction(props) {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -45,10 +45,13 @@ export default function ProjectsIntroduction(props) {
   return (
     <div>
       <ScreenHeading
-        title={"ProjectsIntroduction"}
-        subHeading={"Introduction to some of my projects."}
+        title={"Projects Introduction"}
+        subHeading={"A short introduction to some of my projects."}
       />
-      <section className="ProjectsIntroduction-section" id={props.id || ""}>
+      <section
+        className="ProjectsIntroduction-section fade-in"
+        id={props.id || ""}
+      >
         <div className="container">
           <div className="row">
             <OwlCarousel

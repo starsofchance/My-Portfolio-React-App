@@ -1,14 +1,14 @@
 import { TOTAL_SCREENS } from "./commonUties";
 import { Subject } from "rxjs";
 
-class ScrollService {
-  static scrollHandler = new ScrollService();
+export default class ScrollService {
+  static scrollService = new ScrollService();
 
   static currentScreenBroadcaster = new Subject();
   static currentScreenFadeIn = new Subject();
 
   constructor() {
-    window.addEventListener("scroll", this.checkCurrentScreenUnderViewport);
+    window.addEventListener("scroll", this.checkCurrentScreenUnderViewPort);
   }
   scrollToHireMe = () => {
     let contactMeScreen = document.getElementById("Contact Me");
@@ -39,14 +39,14 @@ class ScrollService {
         return false;
     }
   };
-  checkCurrentScreenUnderViewport = (event) => {
+  checkCurrentScreenUnderViewPort = (event) => {
     if (!event || Object.keys(event).length < 1) return;
     for (let screen of TOTAL_SCREENS) {
-      let screenFromDOM = document.getElementById(screen.screen_name);
-      if (!screenFromDOM) continue;
+      let screenFromDom = document.getElementById(screen.screen_name);
+      if (!screenFromDom) continue;
 
-      let fullyVisible = this.isElementInView(screenFromDOM, "complete");
-      let partiallyVisible = this.isElementInView(screenFromDOM, "partial");
+      let fullyVisible = this.isElementInView(screenFromDom, "complete");
+      let partiallyVisible = this.isElementInView(screenFromDom, "partial");
 
       if (fullyVisible || partiallyVisible) {
         if (partiallyVisible && !screen.alreadyRendered) {
@@ -66,4 +66,3 @@ class ScrollService {
     }
   };
 }
-export default ScrollService;

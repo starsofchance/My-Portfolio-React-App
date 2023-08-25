@@ -13,13 +13,14 @@
   color: white;
 }
 .header-logo {
-  font-size: 50px;
+  font-size: 25px;
   font-family: "Poppins ExtraBold";
   color: white;
 }
 .header-options {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .header-option {
   font-size: 16px;

@@ -1,7 +1,11 @@
 import React from "react";
 // import Typical from "react-typical";
+
+import ScrollService from "../../../uitilities/ScrollService";
+
 import "./Profile.css";
 export default function Profile() {
+  const scrollService = new ScrollService();
   return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -70,9 +74,11 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{""}
+            <button
+              className="btn primary-btn"
+              onClick={() => scrollService.scrollToHireMe()}
+            >
+              Hire Me
             </button>
             <a href="Mohammad-Taghavi-FED.pdf" download="Mohammad Taghavi.pdf">
               <button className="btn highlighted-btn">My Resume</button>

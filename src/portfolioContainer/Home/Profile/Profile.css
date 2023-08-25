@@ -108,6 +108,8 @@
   .profile-options {
     display: flex;
     justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .profile-details {
     margin: 25px 0 0;
