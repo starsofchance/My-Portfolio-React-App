@@ -79,3 +79,6 @@ export default function AboutMe(props) {
     </div>
   );
 }
+{
+  /* <button className="btn highlighted-btn">My Resume</button> */
+}
