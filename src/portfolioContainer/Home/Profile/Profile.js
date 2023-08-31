@@ -45,12 +45,13 @@ export default function Profile() {
           </div>
           <div className="profile-details-name">
             <span className="primary-text">
-              {""}Hello, I'm <span className="highlighted-text">Mohammad</span>
+              {""}Greetings, Earthling! I'm{" "}
+              <span className="highlighted-text">Mohammad.</span>
             </span>
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
-              <h1>This is where you can get to know me.</h1>
+              <h1>Frontend wizard by day, dreamer by night.</h1>
               {/* {""}
               <h1>
                 {""}
@@ -68,9 +69,6 @@ export default function Profile() {
                   ]}
                 />
               </h1> */}
-              <span className="profile-role-tagline">
-                Lets make the world a little better using front-end developer.
-              </span>
             </span>
           </div>
           <div className="profile-options">

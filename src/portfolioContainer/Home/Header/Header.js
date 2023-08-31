@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
@@ -40,9 +40,13 @@ export default function Header() {
   };
 
   const switchScreen = (index, screen) => {
-    let screenComponent = document.getElementById(screen.screen_name);
-    if (!screenComponent) return;
-    screenComponent.scrollIntoView({ behavior: "smooth" });
+    if (screen.screen_name === "Home") {
+      ScrollService.scrollService.scrollToHome(); // Scroll to "Home" using ScrollService
+    } else {
+      let screenComponent = document.getElementById(screen.screen_name);
+      if (!screenComponent) return;
+      screenComponent.scrollIntoView({ behavior: "smooth" });
+    }
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };

@@ -9,7 +9,7 @@
   letter-spacing: 3px;
   margin: 8px 0 10px 0;
   font-size: 12px;
-  color: var(--black);
+  color: black;
 }
 .screen-heading {
   font-size: 32px;
@@ -38,5 +38,5 @@
 .separator-blob div {
   width: 35px;
   border-radius: 10px;
-  background-color: var(--dark-orange);
+  background-color: #258c95;
 }

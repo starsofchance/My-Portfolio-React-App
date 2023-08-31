@@ -96,9 +96,11 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn {
   color: white;
-  border: 2px solid linen;
+  border: 2px solid #0a2c47;
+  /* #148ed1 900 */
   font-size: 12px;
-  background-color: #1f2235;
+  background-color: #3fb2f1;
+  /* #148ed1 400 */
 }
 @media only screen and (max-width: 414px) {
   .primary-btn {
@@ -108,22 +110,25 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn:hover {
   color: aliceblue;
-  border: 2px solid #ff5823;
-  background-color: #1f2235;
+  border: 2px solid white;
+  background-color: #0f456b;
 }
 
 .highlighted-btn {
   /* color: var(--white); */
+
   color: white;
+  border: 2px solid #0a2c47;
+  /* #148ed1 900 */
   font-size: 12px;
-  background-color: #ff5823;
+  background-color: #e121a2;
   margin: 0 0 0 28px;
 }
 .highlighted-btn:hover {
-  color: var(--white);
-  color: black;
+  color: white;
+  border: 2px solid white;
   font-size: 12px;
-  background-color: #ff5823;
+  background-color: #a1136d;
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {

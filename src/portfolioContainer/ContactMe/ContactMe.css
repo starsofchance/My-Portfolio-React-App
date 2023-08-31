@@ -14,7 +14,7 @@
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: #1f2235;
+  background-color: #0b5381;
 }
 
 .central-form h2 {
@@ -39,12 +39,12 @@
   font-weight: 400;
   color: white;
   font-size: 18px;
-  opacity: 0.5;
 }
 
 .back-form .img-back img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
+  border-radius: 10px;
 }
 
 .central-form form {
@@ -65,7 +65,7 @@
 form p {
   text-align: center;
   margin-bottom: 10px;
-  color: #ff5823;
+  color: #a11b0b;
   letter-spacing: 0.1rem;
   font-family: "Poppins Bold";
 }
@@ -103,11 +103,11 @@ form button {
   padding: 5px;
   outline: none;
   width: 900px;
-  color: rgb(230, 227, 227);
-  border: 2px solid #ff5823;
+  color: white;
+  border: 2px solid #0a2c47;
   font-size: 12px;
   border-radius: 19px;
-  background-color: #1f2235;
+  background-color: #3fb2f1;
   font-size: 18px;
   width: 160px;
   align-items: center;
@@ -117,9 +117,11 @@ form button {
 form button:hover {
   background-color: #1f2235;
   transition: all ease 1s;
-  border: 2px solid #1f2235;
+  border: 2px solid #24717a;
 }
-
+.fa-paper-plane {
+  margin-left: 10px;
+}
 button .load {
   width: 100%;
 }
@@ -127,6 +129,7 @@ button .load {
 button .load img {
   width: 60px;
   color: green;
+  margin-left: 10px;
 }
 .col i {
   padding: 7px;

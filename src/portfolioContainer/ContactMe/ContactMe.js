@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import imgBack from "../../../src/contactMeImages/mailz.jpeg";
-import load1 from "../../../src/contactMeImages/load2.gif";
+import imgBack from "../../../src/contactMeImages/mailz2.jpg";
+import load2 from "../../../src/contactMeImages/load2.gif";
 import ScreenHeading from "../../uitilities/ScreenHeading/screenHeading";
 import ScrollService from "../../uitilities/ScrollService";
 import Animations from "../../uitilities/Animations";
@@ -120,7 +120,7 @@ export default function ContactMe(props) {
                 <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">
-                    <img src={load1} alt="image not responding" />
+                    <img src={load2} alt="image of emain network" />
                   </b>
                 ) : (
                   ""
