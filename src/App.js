@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import ScrollService from "../../client/src/uitilities/ScrollService";
+import ScrollService from "../src/uitilities/ScrollService";
 import PortfolioContainer from "./portfolioContainer/PortfolioContainer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
