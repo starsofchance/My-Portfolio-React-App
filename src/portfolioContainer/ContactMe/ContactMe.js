@@ -56,7 +56,6 @@ export default function ContactMe(props) {
         setMessage("");
       }
     } catch (error) {
-      console.log("Error sending email:", error);
     } finally {
       setBool(false);
     }

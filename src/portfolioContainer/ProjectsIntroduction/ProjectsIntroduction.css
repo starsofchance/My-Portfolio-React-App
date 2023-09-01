@@ -1,30 +1,23 @@
 .ProjectsIntroduction-section {
   padding: 80px 0 80px;
-  background-image: url("../../../src/img/ProjectsIntroduction/bg-1.jpg");
+  background-image: url("../../../src/assets/Home/bg.jpg");
+
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  z-index: -1;
+  padding-bottom: 0;
 }
-.ProjectsIntroduction-section::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.85;
-  background-color: #1f2235;
-}
+
 .footer-image {
   width: 100%;
   height: 100%;
-  max-width: 1920px;
+  max-width: 6000px;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  margin-top: -110px;
+  padding-bottom: 0;
 }
 .footer-image img {
   max-width: 100%;
@@ -34,8 +27,17 @@
 .ProjectsIntroduction-section .testi-item {
   background-color: white;
   padding: 30px;
-  border-radius: 50px 50px 50px 0px;
-  margin-left: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  max-width: 350px; /* Set maximum width for the container */
+  width: 100%; /* Occupy the available width */
+  /* box-sizing: border-box; */
+  /* margin-left: 50px; */
 }
 
 .ProjectsIntroduction-section .testi-item p {
@@ -45,48 +47,55 @@
   margin: 0 0 10px;
   font-style: italic;
 }
-.ProjectsIntroduction-section .testi-item p .fa-quote-left {
-  margin-right: 5px;
-  color: tomato;
+.ProjectsIntroduction-section .testi-item p a {
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
-.ProjectsIntroduction-section .testi-item p .fa-quote-right {
-  margin-left: 5px;
-  color: tomato;
+.ProjectsIntroduction-section .testi-item img {
+  border: 2px solid transparent;
+  border-color: black;
+  border-radius: 10px;
+  width: 300px;
+  height: 250px;
 }
 
-.ProjectsIntroduction-section .testi-comment .stars {
-  margin: 0 0 20px;
-}
-.ProjectsIntroduction-section .testi-comment .stars li {
-  display: inline-block;
-  margin: 0 1px;
-}
-.ProjectsIntroduction-section .testi-comment .stars li i {
-  font-size: 13px;
-  color: tomato;
-}
 .ProjectsIntroduction-section .project-info {
   position: relative;
-  padding-left: 80px;
+
   padding-top: 5px;
   min-height: 60px;
 }
-.ProjectsIntroduction-section .project-info img {
-  height: 70px;
-  width: 70px;
-  border: 2px solid transparent;
-  border-color: black;
-  left: 0;
-  top: 0;
+#ProjectsIntroduction-carousel .owl-prev,
+#ProjectsIntroduction-carousel .owl-next {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333333;
+  border: none;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.ProjectsIntroduction-section .project-info h5 {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 26px;
-  margin: 0 0 2px;
+
+/* Style the navigation icons within the buttons */
+#ProjectsIntroduction-carousel .owl-prev span,
+#ProjectsIntroduction-carousel .owl-next span {
+  position: relative;
+  top: -1px;
 }
+
+/* Add hover effect to the buttons */
+#ProjectsIntroduction-carousel .owl-prev:hover,
+#ProjectsIntroduction-carousel .owl-next:hover {
+  background-color: #555555;
+}
+
 .ProjectsIntroduction-section .project-info p {
   font-size: 16px;
   line-height: 26px;

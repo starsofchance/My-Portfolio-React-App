@@ -31,13 +31,25 @@
   color: (--white);
   font-size: 30px;
 }
+
 .highlighted-text {
+  display: inline-block;
+  padding: 5px 10px;
   background: #0a2c47;
   background: linear-gradient(to right, #0a2c47 0%, #86155c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: pulsate 1.5s alternate infinite;
 }
-
+@keyframes pulsate {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 /* .profile-options .highlighted-btn:hover {
   background-color: cornsilk;
   color: #111;

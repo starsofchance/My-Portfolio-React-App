@@ -7,19 +7,28 @@ import ScreenHeading from "../../uitilities/ScreenHeading/screenHeading";
 import ScrollService from "../../uitilities/ScrollService";
 import Animations from "../../uitilities/Animations";
 
-import lady from "../../../src/img/ProjectsIntroduction/lady.png";
-import mike from "../../../src/img/ProjectsIntroduction/mike.png";
-import man from "../../../src/img/ProjectsIntroduction/man.png";
+// importing images of projects
+import lady from "../../../src/img/ProjectsIntroduction/Animation1.gif";
+import mike from "../../../src/img/ProjectsIntroduction/Animation2.gif";
+import man from "../../../src/img/ProjectsIntroduction/Animation3.gif";
+import ma2 from "../../../src/img/ProjectsIntroduction/Animation4.gif";
+import man3 from "../../../src/img/ProjectsIntroduction/Animation5.gif";
+import man4 from "../../../src/img/ProjectsIntroduction/Animation6.gif";
+
+// import footer shape
 import shape from "../../../src/img/ProjectsIntroduction/shape-bg.png";
 import "./ProjectsIntroduction.css";
 export default function ProjectsIntroduction(props) {
+  // Function to handle fading in screen
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
+  // Subscribe to the fadeInScreenHandler using ScrollService
 
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  // Configuration options for OwlCarousel
   const options = {
     loop: true,
     margin: 0,
@@ -28,15 +37,16 @@ export default function ProjectsIntroduction(props) {
     animateOut: "bounceOutRight",
     dots: true,
     autoplay: true,
-    smartSpeed: 1000,
+    smartSpeed: 500,
     responsive: {
       0: {
         items: 1,
       },
-      768: {
-        items: 1,
-      },
+
       1000: {
+        items: 2,
+      },
+      1200: {
         items: 3,
       },
     },
@@ -45,8 +55,8 @@ export default function ProjectsIntroduction(props) {
   return (
     <div>
       <ScreenHeading
-        title={"Projects Introduction"}
-        subHeading={"A short introduction to some of my projects."}
+        title={"Projects Preview"}
+        subHeading={"A preview to some of my projects."}
       />
       <section
         className="ProjectsIntroduction-section fade-in"
@@ -63,70 +73,27 @@ export default function ProjectsIntroduction(props) {
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
-                      <i className="fa fa-quote-right" />
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
                     </p>
-                    <ul className="stars list-unstyled">
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star-half-alt" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                    </ul>
                   </div>
                   <div className="project-info">
                     <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
-                      <i className="fa fa-quote-right" />
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
                     </p>
-                    <ul className="stars list-unstyled">
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star-half-alt" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                    </ul>
                   </div>
                   <div className="project-info">
                     <img src={mike} alt="no internet connection"></img>
-                    <h5>Mikel</h5>
-                    <p>CEO MikeTech</p>
                   </div>
                 </div>
               </div>
@@ -134,79 +101,65 @@ export default function ProjectsIntroduction(props) {
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
-                      <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
-                      <i className="fa fa-quote-right" />
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
                     </p>
-                    <ul className="stars list-unstyled">
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star-half-alt" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="project-info">
-                    <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="testi-item">
-                  <div className="testi-comment">
-                    <p>
-                      <i className="fa fa-quote-left" />
-                      I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
-                      <i className="fa fa-quote-right" />
-                    </p>
-                    <ul className="stars list-unstyled">
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star-half-alt" />
-                      </li>
-                      <li>
-                        <i className="fa fa-star" />
-                      </li>
-                    </ul>
                   </div>
                   <div className="project-info">
                     <img src={man} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <p>
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src={ma2} alt="no internet connection"></img>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <p>
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src={man3} alt="no internet connection"></img>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <p>
+                      <a href="https://www.google.com" target="_blank">
+                        I patronized
+                      </a>
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src={man4} alt="no internet connection"></img>
                   </div>
                 </div>
               </div>
             </OwlCarousel>
           </div>
         </div>
+        <div className="footer-image">
+          <img src={shape} alt=" shape with white color" />
+        </div>
       </section>
-      <div className="footer-image">
-        <img src={shape} alt="image not responding" />
-      </div>
     </div>
   );
 }

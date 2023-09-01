@@ -18,61 +18,7 @@
   --toast-success: #0cbfae;
   --loader-color: #0cbfae;
 }
-/* sky 950: #083344  dark color
-orange 600 #ea580c*/
-/* ming dark: 950  #1a2c32
 
-*/
-.dead {
-  /* '50': '#f2f9f9', */
-  color: #f2f9f9;
-  /* '100': '#ddeff0', */
-  color: #ddeff0;
-  /* '200': '#bfe0e2',*/
-  color: #bfe0e2;
-  /* '300': '#92c9ce' */
-  color: #92c9ce;
-  /* '400': '#5fa9b1',*/
-  color: #5fa9b1;
-  /* '500': '#438e97', */
-  color: #438e97;
-  /* '600': '#3d7a85', */
-  color: #3d7a85;
-  /* '700': '#356069', */
-  color: #356069;
-  /* '800': '#325158', */
-  color: #325158;
-  /* '900': '#2d454c', */
-  color: #2d454c;
-  /* '950': '#1a2c32', */
-  color: #1a2c32;
-}
-.dead1-2 {
-}
-.dead2 {
-  /* '50': '#f7f1fc', */
-  color: #f7f1fc;
-  /* '100': '#eee5fa', */
-  color: #eee5fa;
-  /* '200': '#e2d0f5', */
-  color: #e2d0f5;
-  /* '300': '#d2b3ee', */
-  color: #d2b3ee;
-  /* '400': '#c495e4', */
-  color: #c495e4;
-  /* '500': '#ba7ada', */
-  color: #ba7ada;
-  /* '600': '#b060cb', */
-  color: #b060cb;
-  /* '700': '#9a50b2', */
-  color: #9a50b2;
-  /* '800': '#7d4390', */
-  color: #7d4390;
-  /* '900': '#643c73', */
-  color: #643c73;
-  /* '950': '#2c1a32', */
-  color: #2c1a32;
-}
 .call-to-action-button {
   position: fixed;
   bottom: 1px;
@@ -85,7 +31,6 @@ orange 600 #ea580c*/
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: transform 0.3s, opacity 0.3s;
   width: 50px;
   height: 50px;
 }
@@ -103,11 +48,17 @@ orange 600 #ea580c*/
 .cta-btn:focus {
   outline: none;
 }
+.hidden {
+  opacity: 0;
+  transition: transform 0.5s, opacity 1.5s;
+}
+.apear {
+  transform: scale(0.8);
+  transition: transform 1.5s, opacity 1s;
+}
+
 @media (max-width: 768px) {
   .call-to-action-button {
     display: none;
   }
-}
-.hidden {
-  display: none;
 }

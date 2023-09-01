@@ -55,15 +55,16 @@ export default function Resume(props) {
 
   //here we have
   const programmingSkillsDetails = [
+    { skill: "React" },
+    { skill: "Node.js" },
     { skill: "JavaScript" },
-    { skill: "React JS", ratingPercentage: 85 },
-    // { skill: "React Native", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 80 },
-    { skill: "CSS", ratingPercentage: 80 },
+    { skill: "Express JS" },
+    { skill: "HTML5" },
+    { skill: "CSS3" },
+    { skill: "SASS" },
+    { skill: "Responsive Design" },
+    { skill: "Git, GitHub" },
+    { skill: "Bootstrap" },
   ];
 
   const projectsDetails = [
@@ -95,23 +96,35 @@ export default function Resume(props) {
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"University of Legon Accra, Ghana"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
+        heading={"University of Guilan Guilan, Iran"}
+        subHeading={"Master of Software Engineering"}
+        fromDate={"2022"}
+        toDate={"2024"}
+      />
+      <ResumeHeading
+        heading={"Jahad University Esfahan, Iran"}
+        subHeading={"Bachelor of Electronic Engineering "}
+        fromDate={"2013"}
+        toDate={"2017"}
       />
 
       <ResumeHeading
-        heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
+        heading={"Udemy"}
+        subHeading={"The Ultimate React Course 2023"}
+        fromDate={"07-2023"}
+        toDate={"09-2023"}
       />
       <ResumeHeading
-        heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        heading={"Udemy"}
+        subHeading={"Advanced CSS and Sass"}
+        fromDate={"05-2023"}
+        toDate={"06-2023"}
+      />
+      <ResumeHeading
+        heading={"Udemy"}
+        subHeading={"The Complete 2022 Web Development Bootcamp"}
+        fromDate={"10-2022"}
+        toDate={"03-2023"}
       />
     </div>,
 
@@ -119,31 +132,29 @@ export default function Resume(props) {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Ehizeex Technoloy"}
-          subHeading={"FULL STACK DEVELOPER INTERN"}
-          fromDate={"2021"}
+          heading={"Personal Projects"}
+          subHeading={"Front-End  Developer"}
+          fromDate={"2022"}
           toDate={"Present"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on udemy.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc. .
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Integrated the web app with backend services to create new user
-            onboarding application with dynamic form content.{" "}
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - I stretch my mental capacity to develope UI as per the given
-            designs.
+            Over the past one year and a half, I've been on an exhilarating
+            journey to become a proficient Front End Developer.In the beginning,
+            my primary focus was mastering HTML, CSS, and JavaScript, which
+            paved the way for my exploration of web development. <br />
+            To enhance and showcase my skills, I embarked on creating personal
+            projects, such as a React-based personal portfolio and a
+            documentation app. Additionally, I completed over 50 projects
+            involving vanilla HTML, CSS, and JavaScript, further solidifying my
+            foundation. These projects have been instrumental in refining my
+            abilities and demonstrating my commitment to the field.
+            <br />
+            Looking ahead, I'm dedicated to advancing my expertise in React and
+            plan to delve into TypeScript to stay ahead in the ever-evolving
+            world of front end development. My journey is characterized by
+            continuous learning, hands-on experience, and an unwavering
+            dedication to crafting exceptional digital solutions.
           </span>
           <br />
         </div>
@@ -186,16 +197,20 @@ export default function Resume(props) {
     /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
+        heading="Reading phantasy novels"
+        description='For me, there is nothing quite like immersing myself in the worlds of fantasy novels. I grew up reading "The Lord of the Rings," "The Hobbit," "Deltora Quest," the Harry Potter series, and many others. My library is something I take great pride in.'
+      />
+      <ResumeHeading
         heading="Movies and Series"
-        description="the first show that i watched was Friends, and lets just say that after that i was hooked on the world of sitcoms."
+        description="The first show I watched was Friends, and let's just say that after that, I was hooked on the world of sitcoms. "
       />
       <ResumeHeading
         heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+        description="Listening to instrumental music is something I've cherished since childhood. For me, music serves as the ultimate stress reliever."
       />
       <ResumeHeading
         heading="Gaming"
-        description="I like to challenge my reflexes a lot while competing in games like WOW, Mortal Kombat, and etc, pushing the rank and having interactive gaming sessions excites me the most."
+        description="I enjoy challenging my gaming skills by playing a variety of games such as World of Warcraft, Mortal Kombat, Call of Duty, and more. One of my all-time favorite game series is Assassin's Creed."
       />
     </div>,
   ];
@@ -250,7 +265,10 @@ export default function Resume(props) {
       id={props.id || ""}
     >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
+        <ScreenHeading
+          title={"Resume"}
+          subHeading={"My Professional History"}
+        />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">

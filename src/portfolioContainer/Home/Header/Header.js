@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
@@ -11,7 +11,25 @@ import "./Header.css";
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0); // Add this state
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeComponent = document.getElementById("Home");
+      if (homeComponent) {
+        setScrollPosition(window.scrollY); // Set the scroll position
+        if (homeComponent.getBoundingClientRect().top === 0) {
+          setSelectedScreen(0); // Set "Home" as selected when scrolled to the top
+        }
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const updateCurrentScreen = (currentScreen) => {
     if (!currentScreen || !currentScreen.screenInView) return;
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);

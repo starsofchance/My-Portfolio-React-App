@@ -17,15 +17,15 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+      "An adaptable Frontend developer recognized for unyielding tenacity in overcoming challenges and relentlessly pursuing solutions Demonstrating strong dedication to completing tasks, consistently achieving results that go beyond expectations.",
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
-        "Interactive Front End as per the design",
-        "React and React Native",
-        "Redux for State Mnanagement",
-        "Building REST API",
-        "Managing database",
+        "Frontend developer",
+        "React Developer",
+        "Located in Iran",
+        "Detail oriented",
+        "Kind and Patient",
+        "Critical thinker",
       ],
       heading: "Here are a Few Highlights:",
     },
@@ -45,7 +45,7 @@ export default function AboutMe(props) {
       id={props.id || ""}
     >
       <div className="about-me-parent">
-        <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
+        <ScreenHeading title={"About Me"} subHeading={"Who Am I?"} />
         <div className="about-me-card">
           <div className="about-me-profile"></div>
           <div className="about-me-details">

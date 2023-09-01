@@ -28,11 +28,12 @@ function App() {
     <div className="App">
       <ToastContainer />
       <PortfolioContainer />
-      <div className={`call-to-action-button ${showButton ? "" : "hidden"}`}>
+      <div
+        className={`call-to-action-button ${showButton ? "apear" : "hidden"}`}
+      >
         <button
           className="btn cta-btn"
           onClick={() => {
-            console.log("Button clicked");
             scrollService.scrollToHome();
           }}
         >
